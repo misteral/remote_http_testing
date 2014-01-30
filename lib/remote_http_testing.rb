@@ -64,11 +64,11 @@ module RemoteHttpTesting
     !response.nil? && response.code.to_i == 200
   end
 
-  def delete(url, params = {}, request_body = nil) perform_request(url, :delete, params, request_body) end
-  def get(url, params = {}, request_body = nil) perform_request(url, :get, params, request_body) end
-  def post(url, params = {}, request_body = nil) perform_request(url, :post, params, request_body) end
-  def put(url, params = {}, request_body = nil) perform_request(url, :put, params, request_body) end
-  def patch(url, params = {}, request_body = nil) perform_request(url, :patch, params, request_body) end
+  def do_delete(url, params = {}, request_body = nil) perform_request(url, :delete, params, request_body) end
+  def do_get(url, params = {}, request_body = nil) perform_request(url, :get, params, request_body) end
+  def do_post(url, params = {}, request_body = nil) perform_request(url, :post, params, request_body) end
+  def do_put(url, params = {}, request_body = nil) perform_request(url, :put, params, request_body) end
+  def do_patch(url, params = {}, request_body = nil) perform_request(url, :patch, params, request_body) end
 
   # Used by perform_request. This can be overridden by integration tests to append things to the request,
   # like adding a login cookie.
